@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Navbar from "./Components/Navbar";
+import Gallery from "./Pages/Gallery";
+import Document from "./Pages/Document";
+import Notfound from "./Pages/Notfound";
+import Dashboard from "./Components/Dashboard";
 
 function App() {
+  const [showNav, setShowNav] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
+        </header>
+        <div className="main">
+          <Navbar show={showNav} />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/document" element={<Document />} />
+            <Route path="/*" element={<Notfound />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
