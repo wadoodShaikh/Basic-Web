@@ -24,11 +24,35 @@ body{
 
 }
 
+.chartBox{
+    margin: 10px;
+    margin-left: 19px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    width: 74vw;
+    height: 60vh;
+}
+
 .cardInfo{
     color: black;
     text-align: left;
     margin-left: 10px;
 }
 
-
+.lineChart{
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 46vw;
+    padding: 10px;
+}
+.pieChart{
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 12px;
+    text-align: center;
+}
 

@@ -1,0 +1,32 @@
+[
+  {
+    "label": "January",
+    "progressW": 10,
+    "progressM": 20
+  },
+  {
+    "label": "February",
+    "progressW": 30,
+    "progressM": 40
+  },
+  {
+    "label": "March",
+    "progressW": 40,
+    "progressM": 20
+  },
+  {
+    "label": "April",
+    "progressW": 20,
+    "progressM": 60
+  },
+  {
+    "label": "May",
+    "progressW": 50,
+    "progressM": 30
+  },
+  {
+    "label": "June",
+    "progressW": 30,
+    "progressM": 20
+  }
+]
